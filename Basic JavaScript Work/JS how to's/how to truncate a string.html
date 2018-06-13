@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function truncateString(str, num) {
+        // Clear out that junk in your trunk
+        
+        /*
+        step 1 if statemnet:
+            if the str arugment length is larger than the num argument AND 
+            num argument is larger than 1 (baseline amount)
+            truncateString("A-tisket a-tasket A green and yellow basket", 0);  
+
+            than 
+            return the str.slice(0,num) + '...';
+             which means start a beginning index and count over 8 
+             
+        step 2 else if statement 
+            if the str arugment length is larger than the num argument AND num is 
+            less than or equal to 1 do the return str.slice(o,num) + '...'; statement
+
+        step 3 else just return the str argument 
+        */
+        if(str.length > num && num > 1){ 
+            return str.slice(0,num) + '...'; 
+
+        }else if(str.length > num && num <=1){ 
+            return str.slice(0,num) + '...';
+
+       
+        }else{
+            return str;
+        }
+        
+        }
+
+        truncateString("A-tisket a-tasket A green and yellow basket", 0);  
+        
+        
+    </script>
+</body>
+</html>
