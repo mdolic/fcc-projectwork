@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  
+    <script>
+      /*
+      avaScript provides us with another built-in method, indexOf(), that allows us to quickly and 
+      easily check for the presence of an element on an array. indexOf() takes an element as a 
+      parameter, and when called, it returns the position, or index, of that element, or -1 
+      if the element does not exist on the array.
+
+     let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
+
+        fruits.indexOf('dates') // returns -1
+        fruits.indexOf('oranges') // returns 2
+        fruits.indexOf('pears') // returns 1, the first index at which the element exists */
+
+                function quickCheck(arr, elem) {
+            // change code below this line
+                if(arr.indexOf(elem) !== -1){ //using if else statement 
+                    return true
+                }else {
+                    return false;
+                }
+                
+            // change code above this line
+            }
+
+            // change code here to test different cases:
+            console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+           // ternarny example return arr.index and if it is not in the array should equal -1 (false)
+           //otherwise return true if its there
+         function quickCheck(arr, elem) {
+            // change code below this line
+               return arr.indexOf(elem) === -1 ? false: true;
+                
+            // change code above this line
+            }
+
+            // change code here to test different cases:
+            console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+    </script>
+</body>
+</html>

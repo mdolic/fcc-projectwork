@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /* can use bracket notation as a way to acces property values using the valuation of a valriable
+        imagine that our foods object is being used in a program for a supermarket cash register
+        We have some function that sets the selectedFood and we want to check our foods object for the
+        presence of that food. 
+
+        this will look like this: 
+
+        let selectedFood = getCurrentFood(scannedItem);
+        let inventory = foods[selectedFood];
+
+        This code will evaluate the value stored in the selectedFood variable and 
+        return the value of that key in the foods object, or undefined if it is not present. 
+        Bracket notation is very useful because sometimes object properties are not known before 
+        runtime or we need to access them in a more dynamic way.
+
+    */
+
+        /* 
+            checkinventory function - recieves a scanne ditem as an argument
+            me - return the current value of the scanneditem key in the foods object
+            me - assume that only valid keys will be provided as an arugment to checkinventory
+
+
+        
+        */
+        let foods = {
+            apples: 25,
+            oranges: 32,
+            plums: 28,
+            bananas: 13,
+            grapes: 35,
+            strawberries: 27
+            };
+            // do not change code above this line
+
+        function checkInventory(scannedItem) {
+            // change code below this line
+                let inventory = foods[scannedItem];
+                return inventory;
+            }
+
+            // change code below this line to test different cases:
+            console.log(checkInventory("apples"));
+    
+    </script>
+    
+</body>
+</html>

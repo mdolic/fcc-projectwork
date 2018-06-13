@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+        how to factorialize a number
+         1. return a factorial of the provided integer
+         2. if the integer is represented with the letter n, a factorial
+         is the product of all positive numbers
+         3. factorials are often represented with the shorthand notation n!.
+         example: 5! = 1*2*3*4*5 = 120
+        test cases
+        factorialize(0) should return 1
+        factorialize (1) should return 120
+        factorialize(10) should return 3628800
+        factoalize (20) should return kdsfa
+        when you factoralize a num you are multiplying that num
+        by each consecutive num minus one
+        if you num is 5 you would have this
+        5*4*3*2*1
+    */
+    function factorialize(num){
+        //num = number
+        //if the num is less than 0, reject it!
+        if(num <0)
+        return -1;// can also use console.log here('hello');
+        //if the num is 0, its factorial is 1
+        else if(num == 0)
+        return 1;
+        //else, call the recursive procedure again
+        else{
+            return (num * factorialize(num -1));
+        }
+    }
+    factorialize(5);
+    </script>
+</body>
+</html>

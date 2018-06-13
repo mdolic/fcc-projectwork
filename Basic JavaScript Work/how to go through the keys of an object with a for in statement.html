@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    /*
+
+     you will also learn here how to get start a count for the users that are online 
+    1.how to start the count variable before the loop with  = let count 0;
+    
+    2. start the loop  = for(let obj in users){ }
+
+    2. than use an if statement that says if the argument beign passed in  is online increase the count++
+        for(let obj in users){ 
+            if(obj[user]["online"] === true){
+                count++;
+            }
+            }
+
+    finally to close out the function you need to return the total with = return count= 
+
+    for(let obj in users){ 
+            if(obj[user]["online"] === true){
+                count++;
+                }
+            }
+            return count;
+    -------------------------------------------------------------------------------
+    sometimes you may need to iterate throuhg all the keys within an object
+    to do this you can use a specific syntax in javascript called a for...in statement
+
+
+    for the users objects it could look like this
+                    for (let user in users) {
+                    console.log(user);
+                    };
+
+                        // logs:
+                        Alan
+                        Jeff
+                        Sarah
+                        Ryan
+    */
+                    /*use a for in statement within this function to loop through the users in the 
+                    object
+                    return the number of users whose online property is set to true
+                    
+                    */
+                let users = {
+                    Alan: {
+                        age: 27,
+                        online: false
+                    },
+                    Jeff: {
+                        age: 32,
+                        online: true
+                    },
+                    Sarah: {
+                        age: 48,
+                        online: false
+                    },
+                    Ryan: {
+                        age: 19,
+                        online: true
+                    }
+            };
+
+            /* 
+            loop through the users with a for in statement
+            return the numbers of users whose online property is set to true
+            
+            */
+            function countOnline(obj) {
+            // change code below this line
+                let count = 0;
+               for(let obj in users){
+                  if(obj[user]["online"] ===true){ //bracket notation
+                                        // to get obj.user.online and if the online is true
+                      count++;   //count the number of users here
+                  }
+               }
+               return count;   //return the count total here
+            // change code above this line
+            }
+
+
+            //alternative example 
+
+            function countOnline(obj){
+                let count = 0; //starts the counter at 0 if we're trying to return the number of something
+                for(let user in obj) if(obj[user].online) count++; 
+                return count;
+            };
+            console.log(countOnline(users));
+    
+    </script>
+    
+</body>
+</html>

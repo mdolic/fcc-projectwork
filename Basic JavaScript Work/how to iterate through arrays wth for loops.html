@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*We have defined a function, filteredArray, which takes arr, a nested array, and elem as 
+        arguments, and returns a new array. elem represents an element that may or may not be present 
+        on one or more of the arrays nested within arr. Modify the function, using a for loop, to
+         return a filtered version of the passed array such that any array nested within arr 
+         containing elem has been removed.*/
+
+    function filteredArray(arr, elem) { // arguments
+  let newArr = []; //new array 
+  // change code below this line
+    for(let i = 0;i <arr.length;i++){  //for loop for iterating thru the array
+      if(arr[i].indexOf(elem) === -1){ //if the array item has an index of elemnt that is === (-1) not there
+        newArr.push(arr[i]);    //put in the array one item into an array 
+      }
+    }
+  // change code above this line
+  return newArr;
+}
+
+// change code here to test different cases:
+console.log(filteredArray([[2, 2, 3], [1, 6, 4], [5, 15, 26], [19, 3, 9]], 3));
+function filterdTeams(teamArr, newPlayer){
+    let newArr =[];
+    for(let i = 0;i<teamArr.length;i++){
+      if(teamArr[i].indexOf(newPlayer) === -1){ //if adding a player that exists, remove that array from the arrays 
+        newArr.push(teamArr[i]); 
+      }else if(teamArr.indexOf(newPlayer) > 1){
+        newArr.push(teamArr[i]);
+      }
+    }
+    return newArr;
+}
+console.log(filterdTeams([['lebron','harden','steph'],['kd','klay','dray'],['mirzet','amari','thirdperson']],'john'));
+
+
+//finding if an element exists in the array or not and updating the arrray
+
+let teamArr = ['lebron','jr','tristian','love','hill'];
+function startingFive(teamArr,newPlayer){
+    if(teamArr.indexOf(newPlayer) === -1){
+      teamArr.push(newPlayer);
+      console.log(`new team player is: ${teamArr}`);
+    }else if(teamArr.indexOf(newPlayer) > -1){
+      console.log(`${newPlayer} already exists on the team.`);
+    }
+}
+startingFive(teamArr,'kyrie');
+startingFive(teamArr,'steph');
+startingFive(teamArr,'lebron');
+    </script>
+</body>
+</html>

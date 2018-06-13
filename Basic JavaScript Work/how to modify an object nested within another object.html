@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+<script>
+        /*object properties can be nested to an arbitrary depth, and their values can be any type 
+        of data supported by JavaScript, including arrays and even other objects. 
+        Consider the following:*/
+
+        /*below nestedOject has 3 unique keys,
+        id - values is a number
+        date - value is a string
+        data - value is an object which has yet another object nested inside it*/
+
+        let nestedObject = {
+        id: 28802695164,
+        date: 'December 31, 2016',
+        data: {
+                totalUsers: 99,
+                online: 80,
+                    onlineStatus: {
+                        active: 67,
+                        away: 13
+                    }
+                }
+        };
+
+        console.log(nestedObject);
+
+        //another example 
+        /* has one nested object within the userActivity object
+        can use dot notation or bracket notation to modify this objects
+        requirement - set the value of the online key to 45*/
+        let userActivity = {
+            id: 23894201352,
+            date: 'January 1, 2017',
+            data: {
+                totalUsers: 51,
+                online: 42
+            }
+            };
+
+            // change code below this line
+                userActivity.data.online = 45;
+            // change code above this line
+
+            console.log(userActivity);
+
+</script>
+    
+</body>
+</html>

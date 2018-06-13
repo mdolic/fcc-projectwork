@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    /*
+    At their most basic, objects are just collections of key-value pairs, or in other words, 
+    pieces of data mapped to unique identifiers that we call properties or keys. 
+    Let's take a look at a very simple example:
+*/
+            let FCC_User = {
+            username: 'awesome_coder',
+            followers: 572,
+            points: 1741,
+            completedProjects: 15
+            };
+    
+    
+    //how to access the above information 
+    let userData = FCC_User.followers; //should = 572 in window
+
+    //accessing with dot notation
+    /* we use '' for dot notation becuase they allow us to pass a varialbe in to be evaluated as a 
+    property name (importatn to know this for later). */
+    let userData2 = FCC_User['followers'] //should = 572 in window
+
+    //how to add a new key value pair (or new item to an object)
+        let foods = {
+            apples: 25,
+            oranges: 32,
+            plums: 28,
+            toppings:{
+                pizza:[
+                 'cheese',
+                 'chicken',
+                 'meat',
+                 'pineapple'
+            ]
+            }
+            };
+    //with dot notation (.)
+            foods.bananas = 13;
+            foods.grapes = 35;
+            foods.strawberries = 27;
+    //bracket notation ['']
+            foods['bananas'] = 13;
+            foods['grapes'] = 35;
+            foods['strawberries'] = 27;
+
+//how to add to the pizzas array in the foods object
+    function addPizzaTopping(foodsObj,topping){
+        foods.toppings.pizza.push(topping);
+
+            return foods.toppings.pizza;
+    };
+             
+             
+             console.log(addPizzaTopping(foods,'marinarra'));
+
+
+    </script>
+    
+</body>
+</html>

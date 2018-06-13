@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+  
+
+    <script>
+//example
+        let thisArray = ['sage', 'rosemary', 'parsley', 'thyme'];
+
+        let thatArray = ['basil', 'cilantro', ...thisArray, 'coriander'];
+// thatArray now equals ['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander']
+
+//my example
+        function spreadOut(){
+            let fragment = ['to', 'code'];
+            let sentence = ['learning',...fragment, 'is', 'fun'];
+            return sentence;
+        }
+
+        console.log(spreadOut());
+    </script>
+
+    
+</body>
+</html>
