@@ -18,32 +18,23 @@
         
         explanation:
 
-
-        */
-
-        function findElement (arr,func){
-            
-            let num; //makes num undefined as default
-            for(let i =0;i<arr.length;i++){ //loop over the array here
-              if(func(arr[i])){ //if the array element is true exit loop
-                  num = arr[i]; //number will equal the arra element 
-                  return num; //return number value
-              }
-            }
-        }
-
-        findElement([1, 3, 5, 9], num => num % 2 === 0);
-        
-        /*
          filter method use here 
         https://hackernoon.com/understanding-map-filter-and-reduce-in-javascript-5df1c7eee464
         */
 
-        /*
-            array find method here 
+       function findElement (arr,func){
 
-            javascript mdn
+        /*returns the array argument and filters the array 
+        into the function with element 0 
+        
         */
+            
+            return arr.filter(func)[0];
+        }
+
+        findElement([1, 3, 5, 9], num => num % 2 === 0);
+
+        
     </script>
     
 </body>
