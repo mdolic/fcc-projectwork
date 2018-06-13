@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+
+        need to create a function that looks through an array(arr)
+        and returns the first element in the array that will pass the test case
+        
+        if no numbers in the array pass the test case, it should return undefined
+        
+        explanation:
+
+
+        */
+
+        function findElement (arr,func){
+            
+            let num; //makes num undefined as default
+            for(let i =0;i<arr.length;i++){ //loop over the array here
+              if(func(arr[i])){ //if the array element is true exit loop
+                  num = arr[i]; //number will equal the arra element 
+                  return num; //return number value
+              }
+            }
+        }
+
+        findElement([1, 3, 5, 9], num => num % 2 === 0);
+        
+        /*
+         filter method use here 
+        https://hackernoon.com/understanding-map-filter-and-reduce-in-javascript-5df1c7eee464
+        */
+
+        /*
+            array find method here 
+
+            javascript mdn
+        */
+    </script>
+    
+</body>
+</html>
