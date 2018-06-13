@@ -1,4 +1,4 @@
-function checkSign(num) {
+ function checkSign(num) {
   return (num ===0) ? "zero" : ( num > 0) ? "positive" : "negative";
 }
 
