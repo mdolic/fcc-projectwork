@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+
+    
+</head>
+<body>
+<script>
+    /*
+    step 1:
+    to select an image, refrence the id attribute set to the name 
+    of the image, and set it equal to the variable of the image
+
+    */
+    let image = document.querySelector("#image name");
+    
+    //step 2 - listen for a click event on the image and on a click event call the  toggleclass function
+    
+    image.onclick = toggleClass;
+
+    /* 
+        the toggle class function, is called everytime there is click event, will remove a CSS class of img
+        if one is there and add a CSS class of image if none exists. that css class makes the image spin
+
+    */
+    function toggleClass(){
+        if(image.className == 'image'){
+            image.className = ''
+             
+        }else{
+            image.className = 'image'
+        }
+    }
+</script>
+    
+    
+</body>
+</html>
