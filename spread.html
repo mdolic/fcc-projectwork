@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const inventors = ['mirzet1','mirzettwo','mirzethree'];
+        const newInventors = ['pizza','pinneeaples'];
+
+        inventors.push(...newInventors);
+        console.log(inventors);
+
+        const name = ['wes', 'bos'];
+        function sayHi(first,last){
+            alert(`hey there ${first} ${last}`);
+        }
+        sayHi(...name)
+        console.log(sayHi(...name));
+    </script>
+</body>
+</html>
