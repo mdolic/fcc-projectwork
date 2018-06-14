@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /*
+        requirements:
+            1. return the provided string (str) with the first letter of each word captialized
+            2. rest of the word should be in lower case
+            3. connecting words like "the" and "of" should also be captialized
+
+        guide tips:
+        1. start by splitting the string into an array of words
+        2. split the sentences
+
+        3. you shoudl make the word lower case before making the first letter uppercase (loop thru this?)
+        4. use the replace method on each word to capticalize the first letter of each word.
+
+        5.  you will need to create a new string with pieces of the previous one and at the end merge everything into a single string again
+        6. in replace method, give first argument as the positon of the first letter using charAt.
+        7. for second arguement write a function to return the captialized letter as the repalcement
+
+        */
+        
+        function titleCase(str){
+            let strArrays = str.split(" "); //im taking the string here and spliting it into an array 
+           strArrays = strArrays.map(v => v.toLowerCase()); //maping over this array here and changing each item to lowercase
+            for(let i = 0; i<strArrays.length;i++){ //using for loopp here to go through the array 
+              strArrays[i]= strArrays[i].charAt(0).toUpperCase() + strArrays[i].substr(1,strArrays[i].length-1);
+           }   /*   
+                    1st = strArrays[i] = reassignment of the array elements here 
+                    2nd = strArrays[i].charAt(0).toUpperCase() = stryindex of elements in array grab the character at position 0 and turn to upperCase
+                    3rd = strArrays[i].substr(1,strArrays[i].length-1) = grabs the strArrays[i] and returns part of the string between start index and number
+                    of characters after it. returns the strings afterwards otherwise the funciton returns 'IALTP'
+                */
+
+           strArrays = strArrays.join(' '); // just assign here the strArrays and join the individual elements of the array back to a single string
+            return strArrays;
+        }
+        titleCase("I'm a little tea Pot");
+
+        // basic alternate solution 
+
+        function titleCase2(str){
+            //step 1: //reassinging string + using tolowercase().split(" ") for lowercase letters and place in array 
+            let convertToArray = str.toLowerCase().split(" "); 
+
+            /*step 2 reassign to result, map over the array, return val varible with replace. 
+                val.charAt(0) = position of first letter that will use chartAt,
+                val.charAt(0).toUpperCase() = charAt position that will be captial letter
+            */
+            let result = convertToArray.map((val) =>{
+                return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+            });
+
+            //step 3 join string together 
+            return result.join(' ');
+        }
+            titleCase2("I'm a littLe tea PoT");
+
+            /*advanced solution
+                1. first lowercase all the characters in the string and then only uppercasing the first
+                character. example => str.toLowerCase()
+                2. Replace every word's first character to upper case with .replace
+                3. Search for character at the beginning of each word i.e. matching any character following a space or 
+                matching the first character of the whole string, by using the following pattern.
+                4. Regex used 
+                    4.1 Find all the non-whitespace characters (\S)
+                    4.2 At the beginning of string (^)
+                    4.3 Or after any white space character (\s)
+                    4.4 g modifier is used for global for the whole string and replace it
+            */
+        
+            function titleCaseAdvance(str){
+                return str.toLowerCase().replace(/(^|\s)\S/g,(L)=> L.toUpperCase());
+            }
+            titleCaseAdvance("helLOo I am someThing");
+    </script>
+    
+</body>
+</html>
