@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            remove all false values from an array
+            false values = false, null, 0, "", undefined and NaN
+
+
+            hint:
+            try to convert each value to a boolean
+
+        filter() method exxpects a function that reutnrs a Boolean value which takes a single
+        argument and returns true for truthy value or false for falsy value. hence we pass the 
+        built-in Boolean funciton
+
+        */
+
+            
+
+        function bouncer(arr){
+            
+            //use the filter option to remove out the Boolean values
+            return arr.filter(Boolean);
+            
+            
+        }
+    
+        bouncer([7,"ate","",false,9,NaN]);
+    </script>
+</body>
+</html>
