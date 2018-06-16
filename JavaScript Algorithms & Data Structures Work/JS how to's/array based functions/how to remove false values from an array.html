@@ -23,16 +23,27 @@
         */
 
             
-
+    //advanced solution
         function bouncer(arr){
             
             //use the filter option to remove out the Boolean values
-            return arr.filter(Boolean);
-            
-            
+            return arr.filter(Boolean); 
+        }
+        bouncer([7,"ate","",false,9,NaN]);
+
+        //beginner-intermediate solution 
+
+        function bouncer2(arr){
+            //only return values that evaluate as true inside the array
+            //arrow function with filter melthod
+            return arr.filter((arrValue) => {
+                if(arrValue){
+                    return(arrValue);
+                }
+            })  
         }
     
-        bouncer([7,"ate","",false,9,NaN]);
+        bouncer2([7,"ate","",false,9,NaN]);
     </script>
 </body>
 </html>
