@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    /*
+        requirement:
+        1. return the lowest index at which a value (second argument = num) should be
+        inserted into an array (first argument = arr) once it has been sorted
+        2. returned value should be a number == should return index position
+        
+        steps:
+        1. take in array and sort 
+        2. take in the value and 
+    */
+        
+        //beginner code solution
+        function getIndexToIns(arr, num){
+            //step 1 use sort method on the arr argument 
+            arr.sort((a,b) =>{
+                return a-b;
+            });
+            /*step 2 use for loop to iterate thru the array and 
+                if the arr[i] index elmeent is greater than or equal to num
+                return the index position i;
+            */
+            for(let i = 0;i < arr.length;i++){
+                if(arr[i] >= num)
+                return i;
+            }
+            //step 3 return arr.length which is the position in array
+            return arr.length;
+        }
+        getIndexToIns([40, 60,43,34,55], );
+
+        //intermediate code solution 
+        function getIndexOf(arr,num){
+            /*step 1 we add the num to the array using push which adds it as the 
+            last element in the array */
+            arr.push(num); 
+            /*step 2: arr.sort will sort the array in order smallest-largest*/
+            arr.sort((a,b)=>{
+                return a-b;
+            });
+            //step 3: this will get the position of the num argumenet after the sort.!! 
+            return arr.indexOf(num);
+        }
+        getIndexOf([40,60],50);
+    </script>
+    
+</body>
+</html>
