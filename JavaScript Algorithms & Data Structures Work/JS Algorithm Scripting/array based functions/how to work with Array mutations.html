@@ -24,11 +24,20 @@
 
     */
     function mutation(arr){
-        
-        arr.toLowerCase();
-        return arr;
+
+       //step 1: mapped over the arr and returned the value to lower case 
+      let newArrs =   arr.map((val)=>{
+          return val.toLowerCase();
+      });
+       if(newArrs.indexOf() === -1){
+           return false;
+       }else{
+           return true;
+       }
+
+        return newArrs;
     }
-    mutation(["heLLo","hEY"]);
+    mutation(["Alien", "line"]);
     </script>
 </body>
 </html>
