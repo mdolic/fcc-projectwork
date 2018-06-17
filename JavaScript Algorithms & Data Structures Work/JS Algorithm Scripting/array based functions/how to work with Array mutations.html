@@ -29,10 +29,10 @@
       let newArrs =   arr.map((val)=>{
           return val.toLowerCase();
       });
-       if(newArrs.indexOf() === -1){
-           return false;
-       }else{
+       if(newArrs.indexOf() !== -1){
            return true;
+       }else{
+           return false;
        }
 
         return newArrs;
