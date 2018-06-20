@@ -63,16 +63,14 @@
            
         }
 
-        let num = 99;
-        while(num >= 1){
-            console.log((`${num} bottles of juice on the wall!`+
-            ` ${num} bottles of juice~ Take one down, pass it around...`+
-            `${num-1} bottles of juice on the wall`)
-            .replace(/\b1 bottles/g, "1 bottle"));
-           
-            
-            num--;
-        }
+        var num = 99;
+while (num >= 1) {
+    console.log((`${num} bottles of juice on the wall! `
+        + `${num} bottles of juice! Take one down, pass it around... `
+        + `${num-1} bottles of juice on the wall!`)
+        .replace(/\b1 bottles/g, "1 bottle"));
+    num--;
+}
         
 
     </script>
