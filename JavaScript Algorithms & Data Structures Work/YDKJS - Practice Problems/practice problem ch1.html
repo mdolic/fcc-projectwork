@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /*requirements
+        1. calculate the total price of your phone purchase.
+        2. keep purchasing phones until you run out of money in your bank account.
+        3. you will buy accesssories for each phone as long as your purchase amount
+        is below your mental spending threshold
+        4. after you calculated your purchase amount, add in the tax, than print out the
+        calculated purchase amount, properly formatted (toFixed(2)) $
+        5. check the amount agaisnt your bank balance to see if you can afford it or not
+        6. you should define functions for the tax rate,phone price, accessory price
+        and spending threshold, and variable for the bank account balance
+        7. you should define functions for calculating the tax and for formatting the price
+        with a $ and rounding to two decimal places
+
+        bonus challenge:
+        1. try to incorporate into this program, prehaps with the prompt(..) covered in input section
+        2. prompt user for the bank balance
+
+        variables
+
+        */
+
+        const TAX_RATE = .06;
+        const SPENDING_THRESHOLD = 300;
+        const ACCESSORY_PRICE = 9.99;
+        const PHONE_PRICE = 99.97;
+
+        let bankBalance = 500.90;
+        let amount = 0;
+
+        function calculateTax(amount){
+            return amount * TAX_RATE;
+        }
+        function formatAmount(amount){
+            return `$ ${amount.toFixed(2)}`;
+        }
+
+        //while loop to keep buy phones while you still have money
+        while(amount < bankBalance){
+            //buying new phone
+            amount = amount + PHONE_PRICE;
+
+            //if we can afford the accessory item
+            if(amount < SPENDING_THRESHOLD){
+                amount = amount + ACCESSORY_PRICE;
+            }
+        }
+
+        //tax rate payment
+        amount = amount + calculateTax(amount);
+        console.log("your purchase: " + formatAmount(amount));
+        //purchase result is 552.41
+
+        //if i cant afford the purchase steps
+        if(amount > bankBalance){
+            console.log("you cannot afford this item");
+        }
+
+    </script>
+
+</body>
+</html>
