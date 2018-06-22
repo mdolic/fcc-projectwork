@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+    /*
+        reverse string function example 
+        
+    */
+    function reverseString(reverseMe){
+        let reversed = "";
+        for(let i = reverseMe.length -1;i>=0;i--){
+            reversed += reverseMe[i];
+        }
+        return reversed;
+    }
+    console.log(reverseString("Mirzet"));
+
+    //reheat Pizza function 
+    function reHeatPizza(numOfSlices){
+        //code that figures out reheat settings
+        for(let i = 0;i<numOfSlices;i++){
+            console.log(`print num of slices = ${i}`);
+        }
+    }
+        reHeatPizza(7);
+
+    //example function 
+    function findAverage(x, y) {
+        var answer = (x + y) / 2;
+        return answer;
+        }
+
+        var avg = findAverage(5, 9);
+        console.log(avg);
+
+        // x and y are parameters in this function declaration
+        function add(x, y) {
+        // function body
+        var sum = x + y;
+        return sum; // return statement
+        }
+
+        // 1 and 2 are passed into the function as arguments
+        var sum = add(1, 2);
+
+       
+       /* When you concatenate strings using the += operator, you start out with "",
+        which is the neutral element with respect to string concatenation:
+        */
+        // Let's concatenate some strings
+        var sentenceSoFar = "";
+        var myWords = ["This ", "is ", "an", " example."];
+        for (var i = 0; i < 4; i++) {
+            sentenceSoFar += myWords[i];
+        }
+        console.log(sentenceSoFar); // This is an example.
+
+        /*
+            quiz 1 functions 
+            Declare a function called laugh() that returns 
+            "hahahahahahahahahaha!". Print the value returned from the 
+            laugh() function to the console.
+        */
+        function laugh(){
+            let msg = "hahahahahahahahahaha!";
+            return msg;
+        }
+        console.log(laugh());
+
+        /* quiz 2 functions with parameters
+    Write a function called laugh() that takes one parameter, 
+    num that represents the number of "ha"s to return.
+
+            TIP: You might need a loop to solve this!
+
+            Here's an example of the output and how to call the function that you will write:
+
+            console.log(laugh(3));
+            Prints: "hahaha!"
+        */
+
+        function laugh(num){
+            let repeat = "";
+            for(let i = 0;i<num;i++){
+                repeat += "ha"; // repeat = repeat + numofTimes(3);
+            }
+            return repeat + "!";
+        }
+        console.log(laugh(3));
+
+    </script>
+</body>
+</html>
