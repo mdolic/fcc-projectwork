@@ -38,10 +38,60 @@ aa
             x /= 5 // same as x = x / 5
     */
 
-    //quiz 1: 
+    /*quiz 1: 
+                Rewrite the following while loop as a for loop:
+
+                var x = 9;
+                while (x >= 1) {
+                console.log("hello " + x);
+                x = x - 1;
+                }
+
+    */
+                for(let x = 9; x >=1;x--){
+                    console.log(`hello ${x}`);
+                }
+
+            /*quiz 2 
+               Here is a for loop that's supposed to print the numbers 5 through 9. Fix the error!
+
+                
+            */
+            for (let x =5;x <10; x++) {
+            console.log(x);
+            } 
+
+            /*quiz 3
+                The for loop below has an error. Fix it!
+
+                    for (var k = 0 k < 200 k++) {
+                    console.log(k);
+                    }
+
+            */
+            for (var k = 0; k < 200; k++) {
+                    console.log(k);
+                }
+
+                /*quiz 4
+                Write a for loop that prints out the factorial of the number 12:
+
+                A factorial is calculated by multiplying a number by all the numbers 
+                below it. For instance, 3! or "3 factorial" is 3 * 2 * 1 = 6
+
+                3! = 3 * 2 * 1 = 6 3!=3∗2∗1=6
+                4! = 4 * 3 * 2 * 1 = 24 4!=4∗3∗2∗1=24
+                5! = 5 * 4 * 3 * 2 * 1 = 120 5!=5∗4∗3∗2∗1=120
+
+                Save your final answer in a variable called solution and print it to the console.
+                */
+                    let solution = 1;
+                for(let x =1; x<=12;x++){
+                    solution*=x;
+                }
+                console.log(solution);
 
 
-    
     </script>
 </body>
 </html>
