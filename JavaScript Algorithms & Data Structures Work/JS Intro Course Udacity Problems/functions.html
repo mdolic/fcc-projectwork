@@ -185,6 +185,59 @@
         movies(function displayFav(movieName){
             console.log(`my favorite movies is ${movieName}`);
         },`Finding Nemo`);
+
+        /* quiz 2 function laugh
+            below is an anonymous function example
+        */
+      let laugh =  function (num){
+            let repeat = "";
+            for(let i = 0;i<num;i++){
+                repeat += "ha"; // repeat = repeat + numofTimes(3);
+            }
+            return repeat + "!";
+        }
+        console.log(laugh(3));
+
+        /*
+            quiz 3 named function expression example
+            write a named function expression that stores the function in a
+            variable called cry and returns boohoo.
+
+            tip = dont forget tto call the function using the variable name,
+            not the function name
+
+        */
+        let cry = function crying(){
+            return `boohoo!`;
+        }
+        cry();
+
+        /*
+            quiz 4
+            call the emotions() function so that it prints the out you see below,
+            but instead of passing the laugh() function as an argument
+            pass an inline function expression instead.
+
+            emotions("happy",laugh(2));
+        */
+
+        function emotions(myString,myFunc){
+            console.log(`I am ${myString}, ${myFunc(2)}`);
+        }
+
+        emotions("happy", function(n) {
+            return "ha".repeat(n) + "!";
+            });
+
+            //or
+
+        emotions("happy", (laughItem)=>{
+            let repeat = "";
+            for(let i =0;i<laughItem;i++){
+                repeat+="ha";
+            }
+            return repeat + "!";
+        });
 </script>
 </body>
 </html>
