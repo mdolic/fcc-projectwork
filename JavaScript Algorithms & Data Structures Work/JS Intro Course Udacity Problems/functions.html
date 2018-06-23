@@ -11,8 +11,8 @@
 <body>
     <script>
     /*
-        reverse string function example 
-        
+        reverse string function example
+
     */
     function reverseString(reverseMe){
         let reversed = "";
@@ -23,7 +23,7 @@
     }
     console.log(reverseString("Mirzet"));
 
-    //reheat Pizza function 
+    //reheat Pizza function
     function reHeatPizza(numOfSlices){
         //code that figures out reheat settings
         for(let i = 0;i<numOfSlices;i++){
@@ -32,7 +32,7 @@
     }
         reHeatPizza(7);
 
-    //example function 
+    //example function
     function findAverage(x, y) {
         var answer = (x + y) / 2;
         return answer;
@@ -51,7 +51,7 @@
         // 1 and 2 are passed into the function as arguments
         var sum = add(1, 2);
 
-       
+
        /* When you concatenate strings using the += operator, you start out with "",
         which is the neutral element with respect to string concatenation:
         */
@@ -64,9 +64,9 @@
         console.log(sentenceSoFar); // This is an example.
 
         /*
-            quiz 1 functions 
-            Declare a function called laugh() that returns 
-            "hahahahahahahahahaha!". Print the value returned from the 
+            quiz 1 functions
+            Declare a function called laugh() that returns
+            "hahahahahahahahahaha!". Print the value returned from the
             laugh() function to the console.
         */
         function laugh(){
@@ -76,7 +76,7 @@
         console.log(laugh());
 
         /* quiz 2 functions with parameters
-    Write a function called laugh() that takes one parameter, 
+    Write a function called laugh() that takes one parameter,
     num that represents the number of "ha"s to return.
 
             TIP: You might need a loop to solve this!
@@ -97,7 +97,7 @@
         console.log(laugh(3));
 
 
-        //function scope example 
+        //function scope example
         let james = "im looking for this book...";
         function library(){
             let librarian = "oh you want to look in the class./.";
@@ -107,10 +107,10 @@
             }
         }
 
-        /*quiz1 build a triangle 
-            create a function called buildTriangle() that will accept an input 
-            (the triangle at its widest width) 
-            and will return the string representation of a triangle. 
+        /*quiz1 build a triangle
+            create a function called buildTriangle() that will accept an input
+            (the triangle at its widest width)
+            and will return the string representation of a triangle.
             See the example output below.
 
 
@@ -122,7 +122,7 @@
             for(let i = 1;i<=row;i++){
                 triangle += makeLine(i);
             }
-            
+
                 function makeLine(length) {
                 var line = "";
                 for (var j = 1; j <= length; j++) {
@@ -131,9 +131,60 @@
                 return line + "\n";
                 }
         return triangle;
-            
+
         }
         console.log(buildTriangle(5));
+
+        //function expressions
+
+        let catSays = function(max){ //anonymous function
+            let catMsg = "";
+            for(let i = 0;i<max;i++){
+                catMsg += 'meow';
+            }
+            return catMsg;
+        };
+
+        //function expressions and callbacks
+        /*
+            function expression that assigns the function displayFav to the
+            variable favMovie
+        */
+        let favMovie = function displayFav (movieName){
+            console.log(`favorite movie is ${movieName}`);
+        };
+        /*
+            function declaration that has two params, a function for display
+            a msg and a name of a movie
+        */
+
+        function movies(msgFunction, name){
+            msgFunction (name);
+        }
+
+        /*
+            call the movies function pass in the favMovies function and
+            a name of movie
+        */
+        movies(favMovie,"Dark Jedi");
+
+        //alternate solution
+
+        /*
+            two in two argumenets, a function for displaying a message
+            and a name for movies
+        */
+        function movies(msgFunction,name){
+            msgFunction(name);
+        }
+
+        /*
+            call the movies function, pass in the function and
+            name of movie
+        */
+        movies(function displayFav(movieName){
+            console.log(`my favorite movies is ${movieName}`);
+        },`Finding Nemo`);
 </script>
 </body>
 </html>
