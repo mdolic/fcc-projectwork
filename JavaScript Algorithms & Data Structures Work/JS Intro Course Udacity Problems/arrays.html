@@ -138,12 +138,22 @@ crew2.push(doctor);
 
         console.log(doSomething);
 
+        function prettyCool(doSomething){
+            doSomething += 'Thing';
+            doSomething = doSomething.toUpperCase();
+            console.log(doSomething);
+        }
+        doSomething.forEach(prettyCool);
 
 
+            let colors = ['yellow','green','blue','red'];
+            function colorArray(color){
+                color = color.toUpperCase();
+                console.log(color);
+            }
+            colors.forEach(colorArray); //arrayname.forEach(functionname);
 
-
-
-
+        
 </script>
 
 </body>
