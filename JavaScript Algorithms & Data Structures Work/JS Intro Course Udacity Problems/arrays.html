@@ -95,6 +95,55 @@ donuts[0] = "sprinkles";
         }
     }
     console.log(hasEnoughPlayers(team));
+
+/*
+        quiz 6 joining the crew
+        Use the push() method to add the three new crew members to the crew array.
+*/
+let captain = "Mal";
+let second = "Zoe";
+let pilot = "Wash";
+let companion = "Inara";
+let mercenary = "Jayne";
+let mechanic = "Kaylee";      
+let crew2 = [captain, second, pilot, companion, mercenary, mechanic];
+let doctor = "Simon";
+let sister = "River";
+let shepherd = "Book";      
+
+crew2.push(doctor);
+        crew2.push(sister);
+        crew2.push(shepherd);
+        console.log(crew2);
+
+/*
+    METHOD DEFINITIONS
+
+        .reverse() method will reverse elements in an array
+        .sort() method will sort elements in an array 
+        .shift() will remove the first element from an array. 
+        .splice() can be used if you specifiy the index of the first element 
+        .join() method allows you to combine elements in an array to form a string 
+            turnedIntoAString.join('');
+*/
+
+//---------------------- ARRAY LOOPS
+
+        let doSomething = ['one','two','three'];
+        for(let i = 0;i<doSomething.length;i++){ //i is the index of the arr elements
+            doSomething[i] += 'thing';
+            doSomething[i] = doSomething[i].toUpperCase();
+        }
+        //doSomething.split('');
+
+        console.log(doSomething);
+
+
+
+
+
+
+
 </script>
 
 </body>
