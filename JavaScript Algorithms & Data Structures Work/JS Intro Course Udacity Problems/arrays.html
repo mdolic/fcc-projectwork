@@ -47,14 +47,43 @@ donuts[0] = "sprinkles";
     prices[2]=44;
     prices[6]=33;
 
+    /*
+    splice() method lets you specify the index location to add new elements as well as the number
+    of elements youd like to add
+    */
+
+        let donuts2 = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller"];
+        donuts2.splice(1, 1, "chocolate cruller", "creme de leche"); 
+        // removes "chocolate frosted" at 
+        //index 1 and adds "chocolate cruller" and "creme de leche" starting at index 1
 
 
+    let mdigrp = ['cavs','warriors','rockets','boston'];
+    mdigrp.splice(1,1,'sixers','spurs','lakers');
+    console.log(mdigrp);
 
 
+/*
+    quiz 4 colors of rainbow
+    Using only the splice() method, insert the missing colors into the array, 
+    and remove the color "Blackberry" by following these steps:
 
+        Remove "Blackberry"
+        Add "Yellow" and "Green"
+        Add "Purple"
+*/
 
+     let rainbow = ["Red", "Orange", "Blackberry", "Blue"];
+    rainbow.splice(2,1,"Yellow","Green");
+    rainbow.splice(5,1,"Purple");
+    console.log(rainbow);
 
+    /*quiz 5 quiddtch cup
+      
 
+    */
+    let team = ["Oliver Wood", "Angelina Johnson", 
+    "Katie Bell", "Alicia Spinnet", "George Weasley", "Fred Weasley", "Harry Potter"];
 </script>
 
 </body>
