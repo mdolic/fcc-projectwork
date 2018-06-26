@@ -22,12 +22,11 @@
       return "Julia opens the umbrella!";
     }
    },
-   isClosed: false,
    close: function(){
-       if(umbrella.isClosed === true){
+       if(!umbrella.isOpen){ //means is if umbrella is not open 
            return "The umbrella is already closed!";
        }else{
-           umbrella.isClosed = true;
+           umbrella.isOpen= false;
            return "Julia closes the umbrella!";
        }
    }
