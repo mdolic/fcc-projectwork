@@ -224,6 +224,8 @@ to go over each row
 
     for(let row=0; row<players.length;row++){
         for(let column =0;column < players[row].length;column++){
+
+            
             console.log(players[row][column]);
         }
         
@@ -253,7 +255,12 @@ to go over each row
     [67, 6, 53, 537, 2, 168, 16, 2, 1, 8],
     [76, 7, 9, 6, 3, 73, 77, 100, 56, 100]
 ];
-    for(let row)
+    for(let i = 0; i<numbers.length;i++){
+        for(let x = 0;x<numbers[i].length;x++){
+        numbers[i][x] = (numbers[i][x]) % 2 === 0 ? "even": "odd";  
+        //console.log(numbers);
+        }
+    }
 
 
 </script>
