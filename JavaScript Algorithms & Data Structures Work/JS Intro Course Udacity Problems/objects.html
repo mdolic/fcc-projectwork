@@ -8,13 +8,13 @@
 </head>
 <body>
     <script>
-    /* quiz 1 umbrella 
+    /* quiz 1 umbrella
 
     */
-   let umbrella = { 
+   let umbrella = {
   color: "pink",
   isOpen: false,
-  open: function() { 
+  open: function() {
     if (umbrella.isOpen === true) {
       return "The umbrella is already opened!";
     } else {
@@ -23,7 +23,7 @@
     }
    },
    close: function(){
-       if(!umbrella.isOpen){ //means is if umbrella is not open 
+       if(!umbrella.isOpen){ //means is if umbrella is not open
            return "The umbrella is already closed!";
        }else{
            umbrella.isOpen= false;
@@ -31,8 +31,28 @@
        }
    }
 };
-    
-    
+
+
+    let person = {
+        name: "john",
+        age: 55,
+        children:['james','jarrod','alexis']
+
+    };
+
+    let garage = {
+        fireTruck: {
+            color:'red',
+            wheels: 6,
+            operational: true
+        },
+        sedan: {
+            color:'blue',
+            wheels: 4,
+            operational: true
+        }
+    }
+
 
 
 
@@ -78,6 +98,6 @@
 
 
 </script>
-    
+
 </body>
 </html>
