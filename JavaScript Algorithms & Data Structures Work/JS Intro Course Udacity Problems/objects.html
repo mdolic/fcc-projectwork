@@ -133,25 +133,45 @@ let facebookProfile = {
     friends: 500,
     messages: ['something 1','hello 1 ','something again'],
     postMessage: function postMsg(message) {
-        facebookProfile.messages.push(message);
+        this.messages.push(message);
     },
     deleteMessage: function deleteMsg(index){
-        facebookProfile.messages.splice(index,1);
+        this.messages.splice(index,1);
     },
     addFriend: function addingFriend(){
-        facebookProfile.friends++;
+        this.friends++;
     },
     removeFriend: function removingFriend(friends){
-        facebookProfile.friends--;
+        this.friends--;
     }
 
 
 };
 
+/*
+    quiz 4 donuts revisted 
+
+  Use the forEach() method to loop over the array and 
+  print out the following donut summaries using console.log.
+
+Jelly donuts cost $1.22 each
+Chocolate donuts cost $2.45 each
+Cider donuts cost $1.59 each
+Boston Cream donuts cost $5.99 each
+
+*/
 
 
+let donuts = [
+  { type: "Jelly", cost: 1.22 },
+  { type: "Chocolate", cost: 2.45 },
+  { type: "Cider", cost: 1.59 },
+  { type: "Boston Cream", cost: 5.99 }
+];
 
-
+donuts.forEach((donut) =>{
+    console.log(`${donut.type} donuts cost $${donut.cost} each`);
+});
 
 
 
