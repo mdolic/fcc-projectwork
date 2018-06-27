@@ -128,6 +128,26 @@ console.log(savingsAccount.printAccountSummary());
 
 */
 
+let facebookProfile = {
+    name: 'Mirzet',
+    friends: 500,
+    messages: ['something 1','hello 1 ','something again'],
+    postMessage: function postMsg(message) {
+        facebookProfile.messages.push(message);
+    },
+    deleteMessage: function deleteMsg(index){
+        facebookProfile.messages.splice(index,1);
+    },
+    addFriend: function addingFriend(){
+        facebookProfile.friends++;
+    },
+    removeFriend: function removingFriend(friends){
+        facebookProfile.friends--;
+    }
+
+
+};
+
 
 
 
