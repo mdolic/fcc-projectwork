@@ -15,12 +15,34 @@
     this will return a true/false if found or not
     */
 
-    var myObj = {
+    var myObj2 = {
         top: "hat",
         bottom: "pants"
         };
-        myObj.hasOwnProperty("top"); // true
-        myObj.hasOwnProperty("middle"); // false
+        myObj2.hasOwnProperty("top"); // true
+        myObj2.hasOwnProperty("middle"); // false
+
+
+//
+
+// Setup
+var myObj = {
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleigh"
+};
+
+function checkObj(checkProp) {
+  // Your Code Here
+  if(myObj.hasOwnProperty(checkProp) == true){
+    return myObj[checkProp];
+  }
+  return "Not Found" ;
+}
+
+// Test your code by modifying these values
+checkObj("gift");
+
 </script>
 </body>
 </html>
