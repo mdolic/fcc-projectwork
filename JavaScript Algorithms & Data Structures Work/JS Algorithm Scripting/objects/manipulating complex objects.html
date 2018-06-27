@@ -9,9 +9,109 @@
 <body>
 
 <script>
+    /* accessing nested objects
+    sub-properties can be accessed by chaining together the dot or bracket notation
+    */
+
+    var ourStorage = {
+        "desk": {
+            "drawer": "stapler"
+        },
+        "cabinet": {
+            "top drawer": { 
+            "folder1": "a file",
+            "folder2": "secrets"
+            },
+            "bottom drawer": "soda"
+        }
+        };
+        ourStorage.cabinet["top drawer"].folder2; // "secrets"
+        ourStorage.desk.drawer; // "stapler"
+
+        // Setup
+        /*Access the myStorage object and assign the contents of the glove box property to the 
+        gloveBoxContents variable. Use bracket notation for properties with a space in their name.
+
+        */
+        var myStorage = {
+        "car": {
+            "inside": {
+            "glove box": "maps",
+            "passenger seat": "crumbs"
+            },
+            "outside": {
+            "trunk": "jack"
+            }
+        }
+        };
+
+        var gloveBoxContents = myStorage.car.inside["glove box"]; // Change this line
     
-    
-    
+    /*accessing nested arrays
+
+    */
+    var ourPets = [
+  {
+    animalType: "cat",
+    names: [
+      "Meowzer",
+      "Fluffy",
+      "Kit-Cat"
+    ]
+  },
+  {
+    animalType: "dog",
+    names: [
+      "Spot",
+      "Bowser",
+      "Frankie"
+    ]
+  }
+];
+ourPets[0].names[1]; // "Fluffy"
+ourPets[1].names[0]; // "Spot"
+
+/*
+ retrieve the second tree form the varialbe myplants using  object dot and array brack notation
+
+*/
+            // Setup
+            var myPlants = [
+            { 
+                type: "flowers",
+                list: [
+                "rose",
+                "tulip",
+                "dandelion"
+                ]
+            },
+            {
+                type: "trees",
+                list: [
+                "fir",
+                "pine",
+                "birch"
+                ]
+            }  
+            ];
+
+            // Only change code below this line
+
+            var secondTree = myPlants[1].list[1]; // Change this line
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
 </script>
     
 </body>
