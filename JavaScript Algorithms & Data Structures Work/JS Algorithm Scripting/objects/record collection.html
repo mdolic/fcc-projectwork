@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /* requirements
+    write a function that does:
+     1. if the prop isn't tracks and value is empty "", update or set the value for that record's 
+     property
+            1.1 =  adding a new property to an 
+            object = objectname.property i want to add = " some name";
+    2. if prop is "tracks" but the album doesn't have a "tracks" property, create an empty array
+     before adding the new value to the albums correspoonding property.
+    3. if prop is "tracks" and value is empty "", push the value onto the en dof the album's 
+    existing tracks array
+    4. if value is empty "", delete the given prop property from the album 
+
+
+    */
+    
+    
+            // Setup
+        let collection = {
+            "2548": {
+            "album": "Slippery When Wet",
+            "artist": "Bon Jovi",
+            "tracks": [ 
+                "Let It Rock", 
+                "You Give Love a Bad Name" 
+            ]
+            },
+            "2468": {
+            "album": "1999",
+            "artist": "Prince",
+            "tracks": [ 
+                "1999", 
+                "Little Red Corvette" 
+            ]
+            },
+            "1245": {
+            "artist": "Robert Palmer",
+            "tracks": [ ]
+            },
+            "5439": {
+            "album": "ABBA Gold"
+            }
+        };
+        // Keep a copy of the collection for tests
+        let collectionCopy = JSON.parse(JSON.stringify(collection));
+
+        // Only change code below this line
+        function updateRecords(id, prop, value) {
+           if(collection[id].hasOwnProperty("tracks") === true){
+               collection[id][prop].push(value);
+           }else if(collection[id].hasOwnProperty("tracks") === false){
+               let newArr = [];
+                collection[id]
+           }
+        
+        return collection;
+        }
+
+        // Alter values below to test your code
+        updateRecords(2468, "tracks", "mirzet");
+
+    
+</script>
+    
+</body>
+</html>
