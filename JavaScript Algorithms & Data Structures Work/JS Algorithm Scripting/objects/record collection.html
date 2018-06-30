@@ -10,36 +10,36 @@
 <script>
     /* requirements
     write a function that does:
-     1. if the prop isn't tracks and value is empty "", update or set the value for that record's 
+     1. if the prop isn't tracks and value is empty "", update or set the value for that record's
      property
-            1.1 =  adding a new property to an 
+            1.1 =  adding a new property to an
             object = objectname.property i want to add = " some name";
     2. if prop is "tracks" but the album doesn't have a "tracks" property, create an empty array
      before adding the new value to the albums correspoonding property.
-    3. if prop is "tracks" and value is empty "", push the value onto the en dof the album's 
+    3. if prop is "tracks" and value is empty "", push the value onto the en dof the album's
     existing tracks array
-    4. if value is empty "", delete the given prop property from the album 
+    4. if value is empty "", delete the given prop property from the album
 
 
     */
-    
-    
+
+
             // Setup
         let collection = {
             "2548": {
             "album": "Slippery When Wet",
             "artist": "Bon Jovi",
-            "tracks": [ 
-                "Let It Rock", 
-                "You Give Love a Bad Name" 
+            "tracks": [
+                "Let It Rock",
+                "You Give Love a Bad Name"
             ]
             },
             "2468": {
             "album": "1999",
             "artist": "Prince",
-            "tracks": [ 
-                "1999", 
-                "Little Red Corvette" 
+            "tracks": [
+                "1999",
+                "Little Red Corvette"
             ]
             },
             "1245": {
@@ -55,19 +55,19 @@
 
         // Only change code below this line
         function updateRecords(id, prop, value) {
-           
-           /* 
+
+           /*
            1. checks if props is = to tracks AND if
                 value isnt a blank string. if both tests pass, value is pushed into the tracks array
-           2. If that first check doesn’t pass, it next checks only if value isn’t a blank string. 
-                If that test passes, either a new key (prop) and value (value) are added to the object, 
+           2. If that first check doesn’t pass, it next checks only if value isn’t a blank string.
+                If that test passes, either a new key (prop) and value (value) are added to the object,
                 or an existing key is updated if the prop already exists.
-        3. If both these checks fail (meaning value must be an empty string), 
+        3. If both these checks fail (meaning value must be an empty string),
                  then the key (prop) is removed from the object.
            */
-        if (prop === "tracks" && value !== "") { 
+        if (prop === "tracks" && value !== "") { //if prop is equal to tracks & value is not an empty string than execute this below if statement
             if(collection[id][prop]) {
-                collection[id][prop].push(value);
+                collection[id][prop].push(value); //push the value provided
             }
             else {
                 collection[id][prop]=[value];
@@ -80,12 +80,12 @@
 
             return collection;
             }
-        
-        // Alter values below to test your code
-        updateRecords(5439, "artist", "mirzet");
 
-    
+        // Alter values below to test your code
+        updateRecords(5439, "tracks", "scorpion track");
+
+
 </script>
-    
+
 </body>
 </html>
