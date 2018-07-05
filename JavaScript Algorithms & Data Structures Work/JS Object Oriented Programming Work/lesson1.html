@@ -63,6 +63,45 @@
                     };
                     canary instanceof Bird; //returns false here 
 
+            /*understanding Own Properties
+                    the new instance will have a copy of its own properties
+
+            */
+
+            function Bird1(name) {
+            this.name = name;
+            this.numLegs = 2;
+            }
+
+            let duck = new Bird1("Donald");
+            let canary1 = new Bird1("Tweety");
+            let ownProps = [];
+            for(let property in duck){
+                if(duck.hasOwnProperty(property)){
+                    ownProps.push(property);
+                }
+            }
+            console.log(ownProps); // prints ["name","numLegs"];
+
+            for(let property in canary1){
+                if(canary1.hasOwnProperty(property)){
+                    ownProps.push(property);
+                }
+            }   
+            console.log(ownProps);
+
+            //random example 
+            const weapons = ['candlestick','lead pipe','revolver'];
+
+            const makeBroken = weapons.map((item) =>{
+                return `broken ${item}`;
+            });
+
+            console.log(makeBroken);
+
+           
+
+            
 </script>
 </body>
 </html>
