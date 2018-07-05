@@ -28,8 +28,25 @@
         //new instance with passed in strings as arguments
         let terrier = new Dog2("ava","brown-black mix");
 
-        //verify an objects constructor with instance of
-        
+        /*
+            verify an objects constructor with instance of
+        instance of allows you to compare an object to a constructor, return T/F based on
+        whether or not that object was created with the cosntructor
+        */
+            //example: 
+            let Bird = function(name, color) {
+                    this.name = name;
+                    this.color = color;
+                    this.numLegs = 2;
+                    }
+
+                    let crow = new Bird("Alexis", "black");
+
+                    crow instanceof Bird; // => true
+
+            function House(numBedrooms){
+                    this.numBedrooms = numBedrooms;
+                }
 
 </script>
 </body>
