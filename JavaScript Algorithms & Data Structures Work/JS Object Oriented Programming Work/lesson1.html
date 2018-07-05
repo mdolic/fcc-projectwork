@@ -42,11 +42,26 @@
 
                     let crow = new Bird("Alexis", "black");
 
-                    crow instanceof Bird; // => true
-
+                    crow instanceof Bird; // returns true
+            
+            //my solution: 
             function House(numBedrooms){
                     this.numBedrooms = numBedrooms;
                 }
+                let myHouse = new House(4);
+                myHouse instanceof House;
+
+        /*
+            if an instance of is used for an object that has no constructor, result
+            will be below
+        */
+
+                    let canary = {
+                        name:"Mildred",
+                        color:"Yellow",
+                        numLegs:2
+                    };
+                    canary instanceof Bird; //returns false here 
 
 </script>
 </body>
