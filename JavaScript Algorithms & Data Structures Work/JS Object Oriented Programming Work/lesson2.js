@@ -89,7 +89,7 @@ let bird = {
 }
 
 let birdy = new Bird();
-birdy.getWeight(); //returns 15
+birdy.getWeight(); //returns 15 
 
 //how to Understand the Immediately Invoked Function Expression (IIFE)
 //executing a fucntion as soon as it is declared. 
