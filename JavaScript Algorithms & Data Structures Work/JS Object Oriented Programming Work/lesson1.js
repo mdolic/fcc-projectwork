@@ -243,7 +243,24 @@ function Cat(name) {
   duck.eat(); // Should print "nom nom nom"
   beagle.eat(); // Should print "nom nom nom" 
 
+//how to Set the Child's Prototype to an Instance of the Parent
 
+    function Animal() { }
+
+    Animal.prototype = {
+    constructor: Animal,
+    eat: function() {
+        console.log("nom nom nom");
+    }
+    };
+
+    function Dog() { }
+
+    // Add your code below this line
+    Dog.prototype = Object.create(Animal.prototype); // dog inherits all of animal properities here including methods
+
+    let beagle = new Dog();
+    beagle.eat();  // Should print "nom nom nom"
 
 
 
