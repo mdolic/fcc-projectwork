@@ -161,7 +161,7 @@
                 
                 // Modify the code below this line
                 Dog.prototype = {
-                    constructor: Dog,
+                    constructor: Dog, //setting the constructor here 
                     numLegs: 2, 
                     eat: function() {
                     console.log("nom nom nom"); 
@@ -171,9 +171,30 @@
                     }
                 };
 
+//how to Understand Where an Object’s Prototype Comes From
+//doing this with the isPrototypeof
 
+            function Dog(name) {
+                this.name = name;
+            }
+            
+            let beagle = new Dog("Snoopy");
+            
+            // Add your code below this line
+            Dog.prototype.isPrototypeOf(beagle);
 
+//how to Understand the Prototype Chain
 
+            function Dog(name) {
+                this.name = name;
+            }
+            
+            let beagle = new Dog("Snoopy");
+            
+            Dog.prototype.isPrototypeOf(beagle);  // => true
+            
+            // Fix the code below so that it evaluates to true
+            ???.isPrototypeOf(Dog.prototype);
 
 
 
