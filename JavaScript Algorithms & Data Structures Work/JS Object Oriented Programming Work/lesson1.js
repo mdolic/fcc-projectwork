@@ -197,10 +197,51 @@
             Object.prototype.isPrototypeOf(Dog.prototype);
 
 
+//how to use Inheritance So You Don't Repeat Yourself
+function Cat(name) {
+    this.name = name; 
+  }
+  
+  Cat.prototype = {
+    constructor: Cat, 
+  
+  };
+  
+  function Bear(name) {
+    this.name = name; 
+  }
+  
+  Bear.prototype = {
+    constructor: Bear, 
+  
+  };
+  
+  function Animal() { }
+  
+  Animal.prototype = {
+    constructor: Animal,
+    eat:function(){ //added here the eat method so that bear/cat will inherit from animal 
+      console.log(`nom nom nom`);
+    }
+  };
 
+  //how to inherit behaviors from a supertype
+  function Animal() { }
 
-
-
+  Animal.prototype = {
+    constructor: Animal, 
+    eat: function() {
+      console.log("nom nom nom");
+    }
+  };
+  
+  // Add your code below this line
+  
+  let duck = Object.create(Animal.prototype); // calls the animal prototype here
+  let beagle = Object.create(Animal.prototype); // calls the animal prototype here
+  
+  duck.eat(); // Should print "nom nom nom"
+  beagle.eat(); // Should print "nom nom nom" 
 
 
 
