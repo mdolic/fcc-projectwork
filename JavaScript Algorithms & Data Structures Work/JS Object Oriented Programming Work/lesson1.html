@@ -99,9 +99,105 @@
 
             console.log(makeBroken);
 
-           
+           //how to use prototype properties to reduce complicated code
+           //the prototype is an object that is shared among ALL instances of bird
+           //
+           function doggy(name){
+               this.name = name;
+           }
+           doggy.prototype.numLegs = 4; //adding the prototype here 
+           let beagle = new doggy("Snoopy");
 
+           //how to iterate over all properties
+
+           function doggypoo(name){
+               this.name = name; //own property
+           }
+           doggypoo.prototype.numLegs = 4; //prototype property 
+           let beagles = new Dog("Snoopy");
+
+           let ownProps = [];
+           let prototypeProps = []; 
+
+           for(let property in beagles){
+               if(ownProps.hasOwnProperty(property)){
+                   ownProps.push(property);
+               }
+               else{
+                   prototypeProps.push(property);
+               }
+           }
+           console.log(prototypeProps);
+           console.log(ownProps);
             
+           
+           //how to understand the constructor proeprty
+           function Dog(name) {
+            this.name = name;
+            }
+
+                // Add your code below this line
+                function joinDogFraternity(candidate) {
+                
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
 </script>
 </body>
 </html>
