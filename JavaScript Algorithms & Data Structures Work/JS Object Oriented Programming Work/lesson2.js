@@ -68,7 +68,12 @@ let bird = {
   
   // Add your code below this line
   let glideMixin = function(obj){
-      obj.fly = function(){
-          console.log
+      obj.glide = function(){
+          console.log(`Gliding`);
       }
-  }
+  };
+  glideMixin(boat);
+  glideMixin(bird);
+  
+  boat.glide();
+  bird.glide();
