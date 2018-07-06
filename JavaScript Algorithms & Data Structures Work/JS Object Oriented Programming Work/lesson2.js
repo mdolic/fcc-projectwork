@@ -79,4 +79,21 @@ let bird = {
   bird.glide();
 
   //how to Use Closure to Protect Properties Within an Object from Being Modified Externally
+
+  function Bird() {
+  let weight = 15; //sets weight variable to private access
   
+  this.getWeight = function(){ //method created for accesing the  private weight variable
+    return weight;
+  };
+}
+
+let birdy = new Bird();
+birdy.getWeight(); //returns 15
+
+//how to Understand the Immediately Invoked Function Expression (IIFE)
+//executing a fucntion as soon as it is declared. 
+(function () {
+    console.log("Chirp, chirp!");
+  })(); // this is an anonymous function expression that executes right away
+  // Outputs "Chirp, chirp!" immediately
