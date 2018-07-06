@@ -58,7 +58,7 @@ console.log(penguin.fly());
 //how to Use a Mixin to Add Common Behavior Between Unrelated Objects
 let bird = {
     name: "Donald",
-    numLegs: 2
+    numLegs: 2  
   };
   
   let boat = {
@@ -77,3 +77,6 @@ let bird = {
   
   boat.glide();
   bird.glide();
+
+  //how to Use Closure to Protect Properties Within an Object from Being Modified Externally
+  
