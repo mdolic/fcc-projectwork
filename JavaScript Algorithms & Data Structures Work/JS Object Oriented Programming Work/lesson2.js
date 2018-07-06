@@ -54,3 +54,16 @@ Penguin.prototype.fly = function(){ //created the ovverride here on the fly() Bi
 
 let penguin = new Penguin();
 console.log(penguin.fly());
+
+//how to Use a Mixin to Add Common Behavior Between Unrelated Objects
+let bird = {
+    name: "Donald",
+    numLegs: 2
+  };
+  
+  let boat = {
+    name: "Warrior",
+    type: "race-boat"
+  };
+  
+  // Add your code below this line
