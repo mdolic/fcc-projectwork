@@ -14,3 +14,24 @@ Dog.prototype.constructor = Dog;//manually changed the bird constructor property
 
 let duck = new Bird();
 let beagle = new Dog();
+
+//how to Add Methods After Inheritance
+
+function Animal() { }
+Animal.prototype.eat = function() { console.log("nom nom nom"); };
+
+function Dog() { }
+
+// Add your code below this line
+Dog.prototype = Object.create(Animal.prototype); //inhereted the animal properties here
+Dog.prototype.constructor = Dog; //set the dog constructor to dog object
+
+Dog.prototype.bark = function(){ //created a new bark method just for dog 
+    console.log("Woof!");
+}
+// Add your code above this line
+
+let beagle = new Dog();
+
+beagle.eat(); // Should print "nom nom nom"
+beagle.bark(); // Should print "Woof!"
