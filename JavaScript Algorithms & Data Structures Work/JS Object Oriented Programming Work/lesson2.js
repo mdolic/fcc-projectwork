@@ -97,3 +97,15 @@ birdy.getWeight(); //returns 15
     console.log("Chirp, chirp!");
   })(); // this is an anonymous function expression that executes right away
   // Outputs "Chirp, chirp!" immediately
+
+//how to Use an IIFE to Create a Module
+let isCuteMixin = function(obj) {
+    obj.isCute = function() {
+      return true;
+    };
+  };
+  let singMixin = function(obj) {
+    obj.sing = function() {
+      console.log("Singing to an awesome tune");
+    };
+  };
