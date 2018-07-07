@@ -92,8 +92,8 @@ var bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Movi
 // New parameters should come before the bookName one
 
 // Add your code below this line
-function add (bookList,bookName) {
-  let newArr = [...bookList];
+function add (arr,bookName) {
+  let newArr = [...arr];
    newArr.push(bookName);
    return newArr;
   
@@ -104,14 +104,14 @@ function add (bookList,bookName) {
 // New parameters should come before the bookName one
 
 // Add your code below this line
-function remove (bookList,bookName) {
-  let newArr = bookList.slice(0);
-     if(newArr.indexOf(bookName) >=0){
-      newArr.splice(newArr.indexOf(bookName), 1);
-      return newArr;
+function remove (arr,bookName) { //arr = booklist array,bookname = name in  param call below
+  let newArr = [...arr] //create a new array and copy the booklist array that is passed from function call below
+     if(newArr.indexOf(bookName) >=0){ //if new array indexof book name is greater than or equal to 0 remove with below code
+      newArr.splice(newArr.indexOf(bookName), 1); //grab the index position of bookname and remove 1 item.
+      
     // Add your code above this line
     }
-    //return newArr;
+    return newArr; //return the new Array now
 };
 
 var newBookList = add(bookList, 'A Brief History of Time');
