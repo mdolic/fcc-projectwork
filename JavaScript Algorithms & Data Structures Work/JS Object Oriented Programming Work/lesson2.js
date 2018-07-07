@@ -99,13 +99,17 @@ birdy.getWeight(); //returns 15
   // Outputs "Chirp, chirp!" immediately
 
 //how to Use an IIFE to Create a Module
-let isCuteMixin = function(obj) {
+let funModule = (function (){
+    return {
+   isCuteMixin:function(obj) {
     obj.isCute = function() {
       return true;
     };
-  };
-  let singMixin = function(obj) {
+  },
+  singMixin: function(obj) {
     obj.sing = function() {
       console.log("Singing to an awesome tune");
     };
-  };
+}
+}
+})();
