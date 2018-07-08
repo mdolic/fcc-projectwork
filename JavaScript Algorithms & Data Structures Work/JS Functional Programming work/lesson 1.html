@@ -237,15 +237,13 @@ var watchList = [
 ];
 
 // Add your code below this line
+//Use map to pull the title and rating from watchList and save the new array in the rating variable.
+  let rating = watchList.map((item) =>{ 
+    return {title:item.Title, rating:item.imdbRating};
+    
+  });
 
-var rating = [];
-for(var i=0; i < watchList.length; i++){
-  rating.push({title: watchList[i]["Title"],  rating: watchList[i]["imdbRating"]});
-}
 
-// Add your code above this line
-
-console.log(rating); 
 
 
 
