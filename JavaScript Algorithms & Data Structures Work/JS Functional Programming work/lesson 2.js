@@ -9,11 +9,12 @@ Array.prototype.myMap = function(callback){
   // Add your code below this line
   for(let i = 0;i< this.length;i++){  //this references the 
     newArray.push(callback(this[i]));
+  }
   // Add your code above this line
   return newArray;
 
 };
 
 var new_s = s.myMap(function(item){
-  return item * 2;
-});
+    return item * 2;
+  });
