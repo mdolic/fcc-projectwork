@@ -139,7 +139,7 @@ var watchList = [
   step 2. add map method to return selected title and rating with anything >= 8.0
 */
 
-var filteredList  = watchList.filter((item)=>{ 
+const filteredList  = watchList.filter((item)=>{ 
       return Number(item.imdbRating) >= 8.0; //returns number format since its a string in object above
 }).map((item) =>{
   return {title: item.Title,rating:item.imdbRating};
@@ -149,3 +149,5 @@ var filteredList  = watchList.filter((item)=>{
 // Add your code above this line
 
 console.log(filteredList); 
+
+//how to implement filter method on a prototype
