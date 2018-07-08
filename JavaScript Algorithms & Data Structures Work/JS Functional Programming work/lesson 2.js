@@ -151,21 +151,24 @@ const filteredList  = watchList.filter((item)=>{
 console.log(filteredList); 
 
 //how to implement filter method on a prototype
+/* filter method evaluates a criteria to true and returns the result if true
+
+*/
 // the global Array
 var s = [23, 65, 98, 5];
 
-Array.prototype.myFilter = function(callback){
+Array.prototype.myFilter = function(val){
   var newArray = [];
   // Add your code below this line
-    for(let i = 0;i<this.length;i++){
-      if(callback(i) === true)
-        newArray.push(this[i]);
+    for(let i = 0;i<this.length;i++){ //this = global s variable
+      if(val(this[i]) === true) //t his refers to the global s variable without changing it
+        newArray.push(this[i]); 
     }
   // Add your code above this line
   return newArray;
 
 };
 
-var new_s = s.myFilter(function(item){
-  return item % 2 === 1;
+var new_s = s.myFilter((item)=> {
+  return item >50;
 });
