@@ -173,4 +173,4 @@ let directorFilter = watchList.filter((item)=>{
 }).map((item,index,watchList)=>{
   return item.imdbRating;
 });
-let averageRating = Number(directorFilter).reduce((a,b)=> a,b,0) / 
+let averageRating = Number(directorFilter).reduce((a,b)=> a,b,0) / Number(directorFilter.length);
