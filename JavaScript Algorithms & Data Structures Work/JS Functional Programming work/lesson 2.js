@@ -190,9 +190,9 @@ sliceArray(inputAnim, 1, 3);
 
 //how to remove elements from an array using slice instead of splice
 
-function nonMutatingSplice(cities,startIndex,howManyToRemove) {
+function nonMutatingSplice(cities,startPosition,howManyToRemove) {
   // Add your code below this line
-  let newArr = cities.slice(startIndex,howManyToRemove);
+  let newArr = cities.slice(startPosition,howManyToRemove);
   return newArr;
   // Add your code above this line
 }
