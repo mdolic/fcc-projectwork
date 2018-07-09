@@ -175,6 +175,8 @@ var new_s = s.myFilter((item)=> {
 
 
 //how to return part of an array with the slice method
+/*    in this function you create a new array = and than use the arr with slice method
+*/
 function sliceArray(arr, beginSlice, endSlice) {
   // Add your code below this line
 
@@ -188,11 +190,11 @@ sliceArray(inputAnim, 1, 3);
 
 //how to remove elements from an array using slice instead of splice
 
-function nonMutatingSplice(cities) {
+function nonMutatingSplice(cities,startIndex,howManyToRemove) {
   // Add your code below this line
-  return cities.splice(3);
-
+  let newArr = cities.slice(startIndex,howManyToRemove);
+  return newArr;
   // Add your code above this line
 }
 var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
-nonMutatingSplice(inputCities);
+nonMutatingSplice(inputCities,0,3);
