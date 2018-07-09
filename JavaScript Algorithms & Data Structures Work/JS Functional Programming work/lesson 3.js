@@ -139,8 +139,17 @@ var watchList = [
 
 // Add your code below this line
 
-var averageRating;
+let averageRating = watchList.reduce((imdbRating,item,index,watchList)=> {
+      if(item.Director === "Christopher Nolan"){
+        imdbRating += Number(item.imdbRating)/ Number(item.idmbRatinglength);
+      }
+       return imdbRating;
+},0);
 
+console.log(averageRating);
+
+
+ 
 /*plan =
 1. i want to filter out only the chris nolan movies
 2. map over those
@@ -158,4 +167,10 @@ let averageRating = something.reduce(function(all(final thing i will return),ite
 */
 // Add your code above this line
 
-console.log(averageRating);
+
+let directorFilter = watchList.filter((item)=>{
+    return item.Director === "Christopher Nolan";
+}).map((item,index,watchList)=>{
+  return item.imdbRating;
+});
+let averageRating = Number(directorFilter).reduce((a,b)=> a,b,0) / 
