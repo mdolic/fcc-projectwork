@@ -1,5 +1,5 @@
 //how to Implement map on a Prototype
-/*Write your own Array.prototype.myMap(), 
+/*Write your own Array.prototype.myMap(),
 which should behave exactly like Array.prototype.map(). You may use a for loop or the forEach method.*/
 // the global Array
 var s = [23, 65, 98, 5];
@@ -7,7 +7,7 @@ var s = [23, 65, 98, 5];
 Array.prototype.myMap = function(callback){
   var newArray = [];
   // Add your code below this line
-  for(let i = 0;i< this.length;i++){  //this references the 
+  for(let i = 0;i< this.length;i++){  //this references the
     newArray.push(callback(this[i]));
   }
   // Add your code above this line
@@ -19,10 +19,10 @@ var new_s = s.myMap(function(item){
     return item * 2;
   });
 
-//how to use filter method to extract data from an array 
+//how to use filter method to extract data from an array
 
 var watchList = [
-  {  
+  {
     "Title": "Inception",
     "Year": "2010",
     "Rated": "PG-13",
@@ -44,7 +44,7 @@ var watchList = [
     "Type": "movie",
     "Response": "True"
  },
- {  
+ {
     "Title": "Interstellar",
     "Year": "2014",
     "Rated": "PG-13",
@@ -88,7 +88,7 @@ var watchList = [
     "Type": "movie",
     "Response": "True"
  },
- {  
+ {
     "Title": "Batman Begins",
     "Year": "2005",
     "Rated": "PG-13",
@@ -135,11 +135,11 @@ var watchList = [
 ];
 
 // Add your code below this line
-/* step 1. use filter to filter out the greater than or equal to 8.0 
+/* step 1. use filter to filter out the greater than or equal to 8.0
   step 2. add map method to return selected title and rating with anything >= 8.0
 */
 
-const filteredList  = watchList.filter((item)=>{ 
+const filteredList  = watchList.filter((item)=>{
       return Number(item.imdbRating) >= 8.0; //returns number format since its a string in object above
 }).map((item) =>{
   return {title: item.Title,rating:item.imdbRating};
@@ -148,7 +148,7 @@ const filteredList  = watchList.filter((item)=>{
 
 // Add your code above this line
 
-console.log(filteredList); 
+console.log(filteredList);
 
 //how to implement filter method on a prototype
 /* filter method evaluates a criteria to true and returns the result if true
@@ -162,7 +162,7 @@ Array.prototype.myFilter = function(val){
   // Add your code below this line
     for(let i = 0;i<this.length;i++){ //this = global s variable
       if(val(this[i]) === true) //t his refers to the global s variable without changing it
-        newArray.push(this[i]); 
+        newArray.push(this[i]);
     }
   // Add your code above this line
   return newArray;
@@ -172,3 +172,27 @@ Array.prototype.myFilter = function(val){
 var new_s = s.myFilter((item)=> {
   return item >50;
 });
+
+
+//how to return part of an array with the slice method
+function sliceArray(arr, beginSlice, endSlice) {
+  // Add your code below this line
+
+     let newArr = arr.slice(beginSlice,endSlice);
+     return newArr;
+
+  // Add your code above this line
+}
+var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+sliceArray(inputAnim, 1, 3);
+
+//how to remove elements from an array using slice instead of splice
+
+function nonMutatingSplice(cities) {
+  // Add your code below this line
+  return cities.splice(3);
+
+  // Add your code above this line
+}
+var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+nonMutatingSplice(inputCities);
