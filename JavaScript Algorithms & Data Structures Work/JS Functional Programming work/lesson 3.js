@@ -174,3 +174,6 @@ let directorFilter = watchList.filter((item)=>{
   return item.imdbRating;
 });
 let averageRating = Number(directorFilter).reduce((a,b)=> a,b,0) / Number(directorFilter.length);
+/*
+  just use a  reduce function with averageRating variable.
+*/
