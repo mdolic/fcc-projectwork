@@ -139,14 +139,14 @@ var watchList = [
 
 // Add your code below this line
 
-let averageRating = watchList.reduce((imdbRating,item,index,watchList)=> {
-      if(item.Director === "Christopher Nolan"){
-        imdbRating += Number(item.imdbRating)/ Number(item.idmbRatinglength);
-      }
-       return imdbRating;
-},0);
+// let averageRating = watchList.reduce((imdbRating,item,index,watchList)=> {
+//       if(item.Director === "Christopher Nolan"){
+//         imdbRating += Number(item.imdbRating)/ Number(item.idmbRatinglength);
+//       }
+//        return imdbRating;
+// },0);
 
-console.log(averageRating);
+// console.log(averageRating);
 
 
  
@@ -168,12 +168,19 @@ let averageRating = something.reduce(function(all(final thing i will return),ite
 // Add your code above this line
 
 
-let directorFilter = watchList.filter((item)=>{
+let ratingsArr = watchList.filter((item)=>{
     return item.Director === "Christopher Nolan";
 }).map((item,index,watchList)=>{
-  return item.imdbRating;
+  return Number(item.imdbRating);
 });
-let averageRating = Number(directorFilter).reduce((a,b)=> a,b,0) / Number(directorFilter.length);
-/*
-  just use a  reduce function with averageRating variable.
-*/
+let averageRating = ratingsArr.reduce((total,ratingsArr) => total + ratingsArr) / ratingsArr.length;
+
+//alternative solution with only 1 variable
+const averageRating = watchList.reduce((accumulator,individualItem,index,arr)=>{
+  if(individualItem.Director =="Christopher Nolan"){
+    accumulator.count++;
+    accumulator.sum += Number(individualItem.imdbRating);
+  }
+  return index === arr.length -1 ? accumulator.sum/accumulator.count : accumulator;
+}, {sum:0, count: 0});
+
