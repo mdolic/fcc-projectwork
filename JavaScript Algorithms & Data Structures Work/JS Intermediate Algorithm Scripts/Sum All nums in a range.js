@@ -9,14 +9,39 @@
 // i can take newest arr 
 
 function sumAll(arr) {
-    //let newestArr = [...arr];
-
-    arr.map((item)=>{
-       return     Math.max(...arr) - Math.min(...arr);
-    });
+   let max = Math.max(arr[0],arr[1]);
+   let min = Math.min(arr[0],arr[1]);
+   let temp=0;
+   for(let i = min;i <=max;i++){
+       temp +=i;
+   }
+   return temp;
     
-//return arr;
 
   }
   
   sumAll([1, 4]);
+
+  function sumAll(arr) {
+    let sortedArr = arr.sort((a,b)=>{
+       a-b;
+    });
+     let firstNum = arr[0];
+     let secNum = arr[1];
+     let totalSum = (secNum - firstNum + 1) * (firstNum + secNum) /2;
+     return totalSum;
+ 
+   }
+   
+   sumAll([1, 4]);
+
+   function sumAll(arr) {
+    let total = 0;
+    for(let i = Math.min(...arr);i<=Math.max(...arr);i++){
+        total+=i;
+    }
+    return total;
+ 
+   }
+   
+   sumAll([1, 4]);
