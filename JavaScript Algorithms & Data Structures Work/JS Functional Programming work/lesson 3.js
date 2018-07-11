@@ -184,3 +184,13 @@ const averageRating = watchList.reduce((accumulator,individualItem,index,arr)=>{
   return index === arr.length -1 ? accumulator.sum/accumulator.count : accumulator;
 }, {sum:0, count: 0});
 
+//how to sort an array alphabetically using the sort method 
+function alphabeticalOrder(arr) {
+  // Add your code below this line
+ return arr.sort((a,b) =>{
+      return a>b;
+  });
+  
+  // Add your code above this line
+}
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
