@@ -45,3 +45,13 @@ function sumAll(arr) {
    }
    
    sumAll([1, 4]);
+
+   function sumAll(arr) {
+        const min = Math.min(...arr);
+        const max = Math.max(...arr);
+        const total = (max - min +1) * (min + max) /2;
+        return total; 
+ 
+   }
+   
+   sumAll([1, 4]);
