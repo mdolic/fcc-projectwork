@@ -3,7 +3,6 @@ function destroyer(arr) {
     let args= Array.from(arguments);//takes in the arguments, places in the array
     return arr.filter((val)=>{ //goes through the array
         return !args.includes(val);
-
     });
   }
 
