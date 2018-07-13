@@ -32,8 +32,8 @@ function diffArray(arr1, arr2) {
   //alternative solution 3:
 
   function diffArray(arr1,arr2){
-    let filterArr1 = arr1.filter((item) => arr2.indexOf(item) ===-1);
-    let filterArr2 = arr2.filter((item)=> arr1.indexOf(item) ===-1);
+    let filterArr1 = arr1.filter((item) => arr2.lastIndexOf(item) === -1);
+    let filterArr2 = arr2.filter((item)=> arr1.lastIndexOf(item) === -1);
     return filterArr1.concat(filterArr2); 
   }
 
