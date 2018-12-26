@@ -10,7 +10,7 @@ function myReplace(str, before, after) {
     /*
         1. using indexOf() finds the location of the before string
         2. check if first letter of before is captialized agaisnt first letter of
-        after. if not do step 3
+        after. if not do step 31
         3. change after first character to upper case
         4. replace, before with after
         5. finally return the string
