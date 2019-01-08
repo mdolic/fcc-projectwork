@@ -1,23 +1,24 @@
 function pairElement(str) {
   let emptyArr = [];
-  let a = ['G','C'];
-  let b = ['T','A'];
-  let c = ['A', 'T'];
-  let d = ['C','G'];
+  let a = ['G','C']; // if item indexOf(0)== "G"
+  let b = ['T','A']; // if item indexOf(0)== "T"
+  let c = ['A', 'T']; //if item indexOf(0) == "A"
+  let d = ['C','G']; // if item indexOf(0)== "C"
   let newArr = str.split("");
 
-  newArr.map(item =>{
-    if(item[0] === 'C'){
-    emptyArr.push(a);
-    } else if(item[0]=== 'A'){
+  newArr.forEach(item =>{
+    if(item[0] == "C"){
+    emptyArr.push(d);
+    } else if(item[0]== 'A'){
       emptyArr.push(c);
-    } else if(item[0] === 'G'){
-      emptyArr.push(d);
-    }else if(item[0] === 'T'){
+    } else if(item[0] == 'G'){
+      emptyArr.push(a);
+    }else if(item[0] == 'T'){
       emptyArr.push(b)
     }
+    //return newArr;
   });
   return emptyArr;
 
 }
-pairElement("GCG");
+pairElement("CTCTA");
