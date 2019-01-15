@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1 id="title"> World of Warcraft Survey Form</h1>
+<div id= "formstyle">
+  <form id="survey-form">
+    <div>
+      <p id="description"> Welcome, let us know what you are currently thinking about the expansion and what classes are you currently playing!</p>
+    </div>
+    <div>
+      <label id="name-label">Name:   </label>
+      <input type="text" id="name"  placeholder="Please enter your name" required>
+    </div>
+   <div>
+     <label id ="email-label">Email: </label>
+     <input type="email" id="email" pattern="@"placeholder="Please enter your email" required>
+  </div>
+  <div>
+    <label id="number-label">Age: </label>
+    <input type="number" id="number" min="10" max="100" placeholder="Please enter your age" required>
+  </div>
+  <div>
+    <label for="class-select"> Choose your class:</label>
+      <select id="dropdown">
+        <option value="">--Please choose an option--</option>
+        <option value="Blood Death Knight">Blood Death Knight</option>
+        <option value="Prot Paladin">Prot Paladin</option>
+        <option value="Prot Warrior">Prot Warrior</option>
+        <option value="Brewmaster Monk">Brewmaster Monk</option>
+        <option value="Vengenace Demon Hunter">Vengenace Demon Hunter</option>
+    </select>
+  </div>
+   <div>
+      <fieldset id="radiobuttons" atr="name">
+        <legend> What's your favorite thing to do in BFA?</legend>
+        
+     </fieldset>
+  </div>
+  
+  </form>
+</div>
+</body>
+</html>
