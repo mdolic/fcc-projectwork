@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>movies</h1>
+    <button id="getMovies">Get Movies</button>
+    <ul id="movies"></ul>
+
+ <script>
+     document.querySelector('#getMovies').addEventListener('click',getMovies);
+
+     function getMovies(){
+         fetch('https://api.themoviedb.org/3/movie/550?api_key=8445d177220cd43ba437f53e93a2424f')
+            .then((res) => res.text())
+            .then((data) =>{
+                document.querySelector('#movies').innerHTML = data;
+               //console.log(data);
+            })
+     }
+
+</script>
+    
+</body>
+</html>
