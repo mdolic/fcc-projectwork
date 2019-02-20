@@ -13,7 +13,7 @@
 <body>
 
     <button class ="btn btn-yellow mr-4" id="getNews">News Api Data</button>
-
+    <div id="output"></div>
     <script>
 
         //event listener
@@ -22,25 +22,12 @@
 
 
 function getNews(){
-    let url = 'https://newsapi.org/v2/top-headlines?' +
-          'country=us&' +
-          'apiKey=d72454b7ca664c82804bac8410a5f1fa';
-var req = new Request(url);
-fetch(req)
-    .then((response) => response.json()) 
-        .then((data) =>{
-            let output = '<h2 class="mb-4">Top Daily News</h2>';
-            data.forEach((news)=>{
-                output += `
-                    <div class="card card-body mb-3">
-                        <h3>${news.title}</h3>
-                        <h4>${news.author}</h4>
-                        <p>${news.description}</p>
-                `;
-            })
-            document.querySelector('#output').innerHTML = output;
-        })
-            .catch(error => console.log(error));
+
+fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=d72454b7ca664c82804bac8410a5f1fa')
+    .then((res) =>res.json())
+    .then((articles) =>{
+       console.log(articles);
+    })
 
 }
     </script>

@@ -64,15 +64,16 @@
 
 
         function getPosts(){
-            fetch('https://jsonplaceholder.typicode.com/posts')
+            fetch('https://jsonplaceholder.typicode.com/photos')
                 .then((response) => response.json())
                 .then((data) => {
                     let output = '<h2 class="mb-4">Posts</h2>';
-                    data.forEach((post) =>{
+                    data.forEach((photo) =>{
                         output += `
                             <div class="card card-body mb-3">
-                                <h3>${post.title}</h3>
-                                <p>${post.body}</p>
+                                <h3>${photo.albumId}</h3>
+                                <p>${photo.title}</p>
+                                <p>${photo.thumbnailUrl}</p>
                             </div>
                         
                         `;
