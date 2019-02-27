@@ -44,6 +44,22 @@ body {
     margin-top: 50px;
 }
 
+.grid{
+    display: flex;
+}
 
+.img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding: 15px;
 
+    
+
+}
 
